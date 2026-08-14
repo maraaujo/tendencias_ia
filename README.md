@@ -1,0 +1,2 @@
+# tendencias_ia
+atividades_de_tendencias_de_ia
