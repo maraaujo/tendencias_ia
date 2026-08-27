@@ -56,10 +56,3 @@ Consulte cada pasta de unidade para ver os arquivos de atividades, enunciados e 
 - Unidade_01/Atividades.md — Atividades da Unidade 01
 - Unidade_01/Atividade_promt_dia20.md — Exemplo de atividade com prompt e análise
 
-## Contato
-
-Para dúvidas sobre o conteúdo didático ou contribuições, mencione a(s) pessoa(s) responsável(is) indicada(s) nos arquivos de plano de aula e nos PDFs do repositório.
-
----
-
-README gerado/atualizado para refletir os objetivos e a organização do plano de aulas em formato 5W. Se quiser, eu adapto o texto para incluir o cronograma exato, nomes de responsáveis ou instruções de avaliação — informe quais informações deseja adicionar.
