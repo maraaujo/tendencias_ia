@@ -40,7 +40,7 @@ Essa combinação permite desenvolver um protótipo com menor complexidade técn
 
 O projeto utiliza um fluxo composto por quatro etapas principais:
 
-**Google Forms → Google Sheets → Make → API Gemini → Resposta automatizada**
+**Google Forms → Google Sheets → Ferramenta Low Code: Make → API Gemini → Resposta automatizada**
 
 1. O usuário preenche o formulário de solicitação de agendamento.
 2. As informações são registradas no Google Sheets.
