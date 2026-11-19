@@ -1,0 +1,136 @@
+AgendaFácil 2.0 — demonstração local
+Relógio fixo: 2026-11-23 08:00 | Gemini: NÃO CONFIGURADO (mensagens-modelo)
+==============================================================================
+
+[C1] Horário livre -> confirmação
+  status: CONFIRMADO | protocolo: AF-20261123-000001 | motivos: HORARIO_LIVRE
+  justificativa: Solicitação para 24/11/2026 14:00: O horário está livre e atende a todas as regras.
+  e-mail (mensagem-modelo): Agendamento confirmado — protocolo AF-20261123-000001
+  Olá, Bruno!
+  
+  Seu agendamento de Atendimento inicial está confirmado para 24/11/2026 às 14:00.
+  Protocolo: AF-20261123-000001.
+  
+  —
+  Mensagem automática do AgendaFácil 2.0. A decisão foi tomada por regras automáticas verificáveis, aplicadas igualmente a todas as pessoas. Para pedir revisão humana, responda a este e-mail informando o protocolo.
+
+[C2] Horário ocupado -> alternativas (prefere tarde)
+  status: AGUARDANDO_ESCOLHA | protocolo: AF-20261123-000002 | motivos: HORARIO_OCUPADO
+  alternativas: 2026-11-24 08:00 | 2026-11-24 11:00 | 2026-11-24 13:00
+  justificativa: Solicitação para 24/11/2026 10:00: O horário solicitado já está ocupado. Alternativas livres verificadas: 24/11/2026 08:00, 24/11/2026 11:00, 24/11/2026 13:00 (não reservadas).
+  e-mail (mensagem-modelo): Horário indisponível — escolha uma alternativa
+  Olá, Carla!
+  
+  Não foi possível agendar 24/11/2026 às 10:00. O horário solicitado já está ocupado.
+  
+  Horários livres verificados agora (ainda NÃO reservados):
+  - 24/11/2026 às 08:00
+  - 24/11/2026 às 11:00
+  - 24/11/2026 às 13:00
+  
+  Para escolher, envie um novo formulário com o horário desejado e informe o protocolo AF-20261123-000002 no campo "Protocolo anterior".
+  
+  —
+  Mensagem automática do AgendaFácil 2.0. A decisão foi tomada por regras automáticas verificáveis, aplicadas igualmente a todas as pessoas. Para pedir revisão humana, responda a este e-mail informando o protocolo.
+
+[C3] Pessoa escolhe a alternativa informando o protocolo anterior
+  status: CONFIRMADO | protocolo: AF-20261123-000003 | motivos: HORARIO_LIVRE
+  justificativa: Solicitação para 24/11/2026 13:00: O horário está livre e atende a todas as regras.
+  e-mail (mensagem-modelo): Agendamento confirmado — protocolo AF-20261123-000003
+  Olá, Carla!
+  
+  Seu agendamento de Retorno está confirmado para 24/11/2026 às 13:00.
+  Protocolo: AF-20261123-000003.
+  
+  —
+  Mensagem automática do AgendaFácil 2.0. A decisão foi tomada por regras automáticas verificáveis, aplicadas igualmente a todas as pessoas. Para pedir revisão humana, responda a este e-mail informando o protocolo.
+
+[C4] Tentativa de manipulação (prompt injection) em horário ocupado
+  status: AGUARDANDO_ESCOLHA | protocolo: AF-20261123-000004 | motivos: HORARIO_OCUPADO
+  alternativas: 2026-11-24 08:00 | 2026-11-24 11:00 | 2026-11-24 15:00
+  flags: SUSPEITA_MANIPULACAO:IGNORAR_INSTRUCOES+FORCAR_DECISAO
+  justificativa: Solicitação para 24/11/2026 09:00: O horário solicitado já está ocupado. Alternativas livres verificadas: 24/11/2026 08:00, 24/11/2026 11:00, 24/11/2026 15:00 (não reservadas).
+  e-mail (mensagem-modelo): Horário indisponível — escolha uma alternativa
+  Olá, Teste!
+  
+  Não foi possível agendar 24/11/2026 às 09:00. O horário solicitado já está ocupado.
+  
+  Horários livres verificados agora (ainda NÃO reservados):
+  - 24/11/2026 às 08:00
+  - 24/11/2026 às 11:00
+  - 24/11/2026 às 15:00
+  
+  Para escolher, envie um novo formulário com o horário desejado e informe o protocolo AF-20261123-000004 no campo "Protocolo anterior".
+  
+  —
+  Mensagem automática do AgendaFácil 2.0. A decisão foi tomada por regras automáticas verificáveis, aplicadas igualmente a todas as pessoas. Para pedir revisão humana, responda a este e-mail informando o protocolo.
+
+[C5] E-mail inválido e consentimento ausente
+  status: DADOS_INVALIDOS | protocolo: AF-20261123-000005 | motivos: EMAIL_INVALIDO, CONSENTIMENTO_AUSENTE
+  justificativa: Solicitação para 24/11/2026 15:00: O e-mail informado não é válido. O consentimento para tratamento dos dados não foi registrado.
+  e-mail (mensagem-modelo): Não foi possível processar sua solicitação
+  Olá, Dados!
+  
+  Sua solicitação não pôde ser processada: O e-mail informado não é válido. O consentimento para tratamento dos dados não foi registrado.
+  Por favor, envie o formulário novamente com os dados corrigidos.
+  
+  —
+  Mensagem automática do AgendaFácil 2.0. A decisão foi tomada por regras automáticas verificáveis, aplicadas igualmente a todas as pessoas. Para pedir revisão humana, responda a este e-mail informando o protocolo.
+
+[C6] Solicitação duplicada (mesma pessoa do C1)
+  status: DUPLICADO | protocolo: AF-20261123-000006 | motivos: SOLICITACAO_DUPLICADA
+  justificativa: Solicitação para 24/11/2026 14:00: Já existe uma solicitação ativa idêntica para este horário.
+  e-mail (mensagem-modelo): Solicitação já registrada
+  Olá, Bruno!
+  
+  Já existe uma solicitação ativa sua para 24/11/2026 às 14:00 (protocolo AF-20261123-000001). Nenhum novo registro foi criado.
+  
+  —
+  Mensagem automática do AgendaFácil 2.0. A decisão foi tomada por regras automáticas verificáveis, aplicadas igualmente a todas as pessoas. Para pedir revisão humana, responda a este e-mail informando o protocolo.
+
+[C7] Sábado (fora do expediente) -> alternativas
+  status: AGUARDANDO_ESCOLHA | protocolo: AF-20261123-000007 | motivos: DIA_SEM_ATENDIMENTO
+  alternativas: 2026-11-30 08:00 | 2026-11-30 09:00 | 2026-11-30 10:00
+  justificativa: Solicitação para 28/11/2026 10:00: Não há atendimento na data solicitada (fim de semana ou feriado). Alternativas livres verificadas: 30/11/2026 08:00, 30/11/2026 09:00, 30/11/2026 10:00 (não reservadas).
+  e-mail (mensagem-modelo): Horário indisponível — escolha uma alternativa
+  Olá, Diego!
+  
+  Não foi possível agendar 28/11/2026 às 10:00. Não há atendimento na data solicitada (fim de semana ou feriado).
+  
+  Horários livres verificados agora (ainda NÃO reservados):
+  - 30/11/2026 às 08:00
+  - 30/11/2026 às 09:00
+  - 30/11/2026 às 10:00
+  
+  Para escolher, envie um novo formulário com o horário desejado e informe o protocolo AF-20261123-000007 no campo "Protocolo anterior".
+  
+  —
+  Mensagem automática do AgendaFácil 2.0. A decisão foi tomada por regras automáticas verificáveis, aplicadas igualmente a todas as pessoas. Para pedir revisão humana, responda a este e-mail informando o protocolo.
+
+==============================================================================
+Consulta de status pelo titular (C1): {"encontrado":true,"status":"CONFIRMADO"}
+Consulta do mesmo protocolo por outro e-mail: {"ok":true,"encontrado":false,"mensagem":"Não encontramos solicitação para os dados informados."}
+
+Aba "Agenda" (o que fica armazenado):
+┌─────────┬──────────────────────┬──────────────┬─────────┬──────────────────────┬─────────────────┐
+│ (index) │ protocolo            │ data         │ hora    │ status               │ emailHash       │
+├─────────┼──────────────────────┼──────────────┼─────────┼──────────────────────┼─────────────────┤
+│ 0       │ 'AF-20261120-INI001' │ '2026-11-24' │ '09:00' │ 'CONFIRMADO'         │ 'b2f2b4686596…' │
+│ 1       │ 'AF-20261120-INI002' │ '2026-11-24' │ '10:00' │ 'CONFIRMADO'         │ '09e071d7f34d…' │
+│ 2       │ 'AF-20261123-000001' │ '2026-11-24' │ '14:00' │ 'CONFIRMADO'         │ 'b93011047818…' │
+│ 3       │ 'AF-20261123-000002' │ '2026-11-24' │ '10:00' │ 'SUBSTITUIDO'        │ '9730ca63d788…' │
+│ 4       │ 'AF-20261123-000003' │ '2026-11-24' │ '13:00' │ 'CONFIRMADO'         │ '9730ca63d788…' │
+│ 5       │ 'AF-20261123-000004' │ '2026-11-24' │ '09:00' │ 'AGUARDANDO_ESCOLHA' │ '0f07de4e6372…' │
+│ 6       │ 'AF-20261123-000007' │ '2026-11-28' │ '10:00' │ 'AGUARDANDO_ESCOLHA' │ '06764a8d968e…' │
+└─────────┴──────────────────────┴──────────────┴─────────┴──────────────────────┴─────────────────┘
+Aba "Log_Decisoes" (últimos registros):
+┌─────────┬──────────────────────┬───────────────────┬────────────────────────┬─────────────────────────────┬───────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────┐
+│ (index) │ protocolo            │ evento            │ acao                   │ status                      │ usoIA                                                         │ flags                                                    │
+├─────────┼──────────────────────┼───────────────────┼────────────────────────┼─────────────────────────────┼───────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────┤
+│ 0       │ 'AF-20261123-000004' │ 'SOLICITACAO'     │ 'SUGERIR_ALTERNATIVAS' │ 'AGUARDANDO_ESCOLHA'        │ 'interpretacao=BLOQUEADA_POR_SEGURANCA;redacao=NAO_UTILIZADA' │ 'SUSPEITA_MANIPULACAO:IGNORAR_INSTRUCOES+FORCAR_DECISAO' │
+│ 1       │ 'AF-20261123-000005' │ 'SOLICITACAO'     │ 'SOLICITAR_CORRECAO'   │ 'DADOS_INVALIDOS'           │ 'interpretacao=NAO_NECESSARIA;redacao=NAO_UTILIZADA'          │ ''                                                       │
+│ 2       │ 'AF-20261123-000006' │ 'SOLICITACAO'     │ 'INFORMAR_DUPLICIDADE' │ 'DUPLICADO'                 │ 'interpretacao=NAO_NECESSARIA;redacao=NAO_UTILIZADA'          │ ''                                                       │
+│ 3       │ 'AF-20261123-000007' │ 'SOLICITACAO'     │ 'SUGERIR_ALTERNATIVAS' │ 'AGUARDANDO_ESCOLHA'        │ 'interpretacao=NAO_NECESSARIA;redacao=NAO_UTILIZADA'          │ ''                                                       │
+│ 4       │ 'AF-20261123-000001' │ 'CONSULTA_STATUS' │ ''                     │ 'ENCONTRADO'                │ ''                                                            │ ''                                                       │
+│ 5       │ 'AF-20261123-000001' │ 'CONSULTA_STATUS' │ ''                     │ 'NEGADO_TITULAR_DIVERGENTE' │ ''                                                            │ ''                                                       │
+└─────────┴──────────────────────┴───────────────────┴────────────────────────┴─────────────────────────────┴───────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────┘

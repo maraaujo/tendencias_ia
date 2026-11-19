@@ -1,0 +1,41 @@
+
+> agendafacil-2.0@2.0.0 test
+> node --test --test-reporter=spec tests/*.test.js
+
+✔ T01 — agendamento em horário disponível é confirmado e registrado (8.943ms)
+✔ T02 — horário ocupado: não confirma, sugere alternativas reais e não as reserva (5.529ms)
+✔ T03 — dados incompletos são rejeitados sem gravar na agenda (2.469ms)
+✔ T04 — e-mail inválido é rejeitado (várias formas) (2.1342ms)
+✔ T05 — solicitação duplicada não cria novo registro (2.2619ms)
+✔ T06 — falha de comunicação com o Gemini: decisão continua por regras e usa mensagem-modelo (10.5089ms)
+✔ T07 — falha na consulta/gravação da planilha: nada é confirmado (5.6367ms)
+✔ T08 — tentativa de manipular as instruções do agente não altera a decisão (17.981ms)
+✔ T09 — não é possível acessar dados de outro usuário (3.0654ms)
+✔ T10 — mesmas regras para todas as pessoas (sem tratamento inconsistente) (64.6185ms)
+✔ R01 — grade de horários respeita expediente, pausa, fim de semana e feriado (4.7664ms)
+✔ R02 — regras fixas: passado, antecedência mínima/máxima, fora da grade (2.8045ms)
+✔ R03 — alternativas nunca são inventadas: todas livres e dentro das regras (9.4321ms)
+✔ R04 — formatos aceitos de data/hora e normalização (1.6005ms)
+✔ R05 — sem chave do Gemini o agente funciona (modo sem IA) (1.969ms)
+✔ R06 — preferência de período interpretada pela IA só reordena alternativas reais (4.5889ms)
+✔ R07 — IA indica necessidade de atendimento humano: pré-reserva e revisão por pessoa (5.0123ms)
+✔ R08 — revisão humana não cria conflito: reconfirmar exige horário livre (4.0175ms)
+✔ R09 — limite de um agendamento por pessoa por dia (igual para todos) (2.6464ms)
+✔ R10 — retenção seleciona apenas registros vencidos (2.4041ms)
+✔ R11 — agente só executa ações da lista de permissões (2.0284ms)
+✔ R12 — guardrail rejeita mensagens da IA com horário inventado (3.8537ms)
+✔ P01 — agenda e log não guardam e-mail, nome nem observações (9.817ms)
+✔ P02 — dados enviados ao Gemini: sem e-mail, sem nome, identificadores mascarados, dados delimitados (3.8494ms)
+✔ P03 — possível dado sensível (saúde) não é enviado à IA (2.5072ms)
+✔ P04 — resposta ao Make não contém e-mail; nome é aplicado só no envio (2.6771ms)
+✔ P05 — campos desconhecidos enviados pelo formulário são descartados (2.275ms)
+✔ P06 — erros de IA não expõem a chave nem a URL (2.2123ms)
+✔ S01 — repositório de planilha: gravar, listar, consultar e atualizar status (3.5643ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 202.3917

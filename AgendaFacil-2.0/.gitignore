@@ -1,0 +1,9 @@
+# Credenciais e dados locais — nunca publicar
+.env
+.env.*
+!.env.example
+.clasp.json
+.clasprc.json
+*.local.json
+dados-reais/
+node_modules/
