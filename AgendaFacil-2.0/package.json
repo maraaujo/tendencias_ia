@@ -1,0 +1,12 @@
+{
+  "name": "agendafacil-2.0",
+  "version": "2.0.0",
+  "private": true,
+  "description": "AgendaFácil 2.0 — agente de agendamentos com 4 camadas (Forms + Sheets + Make + Apps Script + Gemini)",
+  "scripts": {
+    "test": "node --test --test-reporter=spec tests/*.test.js",
+    "demo": "node local/demo.js"
+  },
+  "engines": { "node": ">=20" },
+  "license": "MIT"
+}
