@@ -7,6 +7,7 @@ Projeto em dupla:
 
 Nome	RGM
 Maria Cecília Araújo Lemos	33478406
+
 Gabriella Oliveira de Souza Dias	34260641
 Projeto entregue: AgendaFácil 2.0 — Agente Inteligente de Agendamentos
 
