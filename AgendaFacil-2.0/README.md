@@ -1,4 +1,4 @@
-Vou corrigir a estrutura Markdown, remover quebras/truncamentos visuais e padronizar títulos, tabelas e blocos de código. Posso devolver o README completo pronto para substituir o arquivo.```markdown
+
 # AgendaFácil 2.0 — Agente Inteligente de Agendamentos
 
 **Unidade 4 — Aplicações e Limitações: Agentes e Ética**  
